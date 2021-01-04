@@ -30,11 +30,11 @@ To start, you will need to add the package. To do that, simply run `npm i chatwi
 ```js
 const chatwind = require("chatwind.js");
 ```
-Now you can use any of the functions below!
+Now you can use any of the functions below! All of the function return a Promise (just an FYI).
 
 ---
 
-### Checking a user
+### Getting a user's information
 ```js
 chatwind.user("USERNAME").then(result => console.log(result));
 ```
