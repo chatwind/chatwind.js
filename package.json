@@ -1,0 +1,31 @@
+{
+  "name": "chatwind.js",
+  "version": "1.0.0",
+  "description": "Official RESTful Node.js API Wrapper to interact with the Chatwind API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatwind/chatwind.js.git"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "keywords": [
+    "chatwind",
+    "api",
+    "nodejs"
+  ],
+  "author": "Chatwind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatwind/chatwind.js/issues"
+  },
+  "homepage": "https://npmjs.org/chatwind.js"
+}
