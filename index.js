@@ -21,6 +21,22 @@ user: function(username) {
       reject(new Error(err));
     }
   });
+},
+/**
+ * Get a list of the servers
+ *
+ * @returns {Promise} - A json of the data recieved from the API
+*/
+servers: function() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(`https://api.chatwind.ga/servers.json`, {method: 'GET'});
+      const json = await response.json();
+      resolve(json);
+    } catch (err) {
+      reject(new Error(err));
+    }
+  });
 }
 
 }

@@ -39,3 +39,9 @@ Now you can use any of the functions below! All of the function return a Promise
 chatwind.user("USERNAME").then(result => console.log(result));
 ```
 The code above should return a 200 OK message. (JSON)
+
+### Get a list of the Chatwind servers
+```js
+chatwind.servers().then(result => console.log(result));
+```
+The code above should return a 200 OK message. (JSON)
