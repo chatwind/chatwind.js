@@ -40,7 +40,7 @@ chatwind.user("USERNAME").then(result => console.log(result));
 ```
 The code above should return a 200 OK message. (JSON)
 
-### Get a list of the Chatwind servers
+### Get a list of the Chatwind voice servers
 ```js
 chatwind.servers().then(result => console.log(result));
 ```
