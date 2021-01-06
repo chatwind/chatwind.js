@@ -30,7 +30,7 @@ user: function(username) {
 servers: function() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`https://api.chatwind.ga/servers.json`, {method: 'GET'});
+      const response = await fetch(`https://api.chatwind.ga/v1/servers.json`, {method: 'GET'});
       const json = await response.json();
       resolve(json);
     } catch (err) {
