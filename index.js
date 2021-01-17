@@ -1,6 +1,8 @@
 // packages
 const fetch = require('node-fetch');
 
+let baseURL = "https://api.chatwindapp.com/v1";
+
 // Module.Exports
 module.exports = {
 
@@ -14,7 +16,7 @@ user: function(username) {
   if (typeof username !== 'string') throw new TypeError('Username must be a string');
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`https://api.chatwind.ga/v1/user?username=${username}`, {method: 'GET'});
+      const response = await fetch(baseURL+`/user?username=${username}`, {method: 'GET'});
       const json = await response.json();
       resolve(json);
     } catch (err) {
@@ -30,7 +32,7 @@ user: function(username) {
 servers: function() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`https://api.chatwind.ga/v1/servers.json`, {method: 'GET'});
+      const response = await fetch(baseURL+`/servers.json`, {method: 'GET'});
       const json = await response.json();
       resolve(json);
     } catch (err) {
