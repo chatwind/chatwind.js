@@ -1,6 +1,6 @@
 {
   "name": "chatwind.js",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Official RESTful Node.js API Wrapper to interact with the Chatwind API",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "nodejs"
   ],
   "author": "Chatwind",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chatwind/chatwind.js/issues"
   },

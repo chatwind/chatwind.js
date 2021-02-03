@@ -13,10 +13,11 @@ const chatwind = require(__dirname+"/index.js");
 
 /* user (error 401) */ await chatwind.user("").then(result => console.log(result));
 
-
-/* servers Testing */
-
-
 /* status (200 OK) */ await chatwind.servers().then(result => console.log(result));
+
+///* user (error "TypeError: Code must be a string") */ await chatwind.customcode().then(result => console.log(result));
+
+/* status (200 OK) */ await chatwind.customcode("test").then(result => console.log(result));
+
 
 })();

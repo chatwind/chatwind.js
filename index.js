@@ -39,6 +39,24 @@ servers: function() {
       reject(new Error(err));
     }
   });
+},
+/**
+ * Get a custom meeting's details
+ *
+ * @param {string} code - The code for the meeting
+ * @returns {Promise} - A json of the data recieved from the API
+*/
+customcode: function(code) {
+  if (typeof code !== 'string') throw new TypeError('Code must be a string');
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(baseURL+`/customcode?code=${code}`, {method: 'GET'});
+      const json = await response.json();
+      resolve(json);
+    } catch (err) {
+      reject(new Error(err));
+    }
+  });
 }
 
 }
