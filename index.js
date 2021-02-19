@@ -57,6 +57,22 @@ customcode: function(code) {
       reject(new Error(err));
     }
   });
+},
+/**
+ * Get Chatwind's statistics
+ *
+ * @returns {Promise} - A json of the data recieved from the API
+*/
+stats: function() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(baseURL+`/stats`, {method: 'GET'});
+      const json = await response.json();
+      resolve(json);
+    } catch (err) {
+      reject(new Error(err));
+    }
+  });
 }
 
 }

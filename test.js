@@ -2,22 +2,13 @@ const chatwind = require(__dirname+"/index.js");
 
 (async () => {
 
-/* user Testing */
+/* user (200 OK) */ await chatwind.user("test").then(result => console.log(result));
 
+/* servers (200 OK) */ await chatwind.servers().then(result => console.log(result));
 
-/* user (200 OK) */ await chatwind.user("milanm").then(result => console.log(result));
+/* customcode (200 OK) */ await chatwind.customcode("test").then(result => console.log(result));
 
-/* user (error 400) */ await chatwind.user("NOTANACCOUNT").then(result => console.log(result));
-
-///* user (error "TypeError: User ID must be a string") */ await chatwind.user().then(result => console.log(result));
-
-/* user (error 401) */ await chatwind.user("").then(result => console.log(result));
-
-/* status (200 OK) */ await chatwind.servers().then(result => console.log(result));
-
-///* user (error "TypeError: Code must be a string") */ await chatwind.customcode().then(result => console.log(result));
-
-/* status (200 OK) */ await chatwind.customcode("test").then(result => console.log(result));
+/* stats */ await chatwind.stats().then(result => console.log(result));
 
 
 })();

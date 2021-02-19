@@ -51,3 +51,9 @@ The code above should return a 200 OK message. (JSON)
 chatwind.customcode("CODE").then(result => console.log(result));
 ```
 The code above should return a 200 OK message. (JSON)
+
+### Get the statistics for Chatwind
+```js
+chatwind.stats().then(result => console.log(result));
+```
+The code above should return a 200 OK message. (JSON)
