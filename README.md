@@ -51,3 +51,14 @@ The code above should return a 200 OK message. (JSON)
 chatwind.stats().then(result => console.log(result));
 ```
 The code above should return a 200 OK message. (JSON)
+
+---
+
+## Unmentioned feature
+If this package does not have a function for a certain API endpoint, we have a function that lets you easily interact with any endpoint!
+```js
+chatwind.api("PATH", "METHOD").then(result => console.log(result));
+```
+This will return a JSON from the endpoint specified.
+
+**Note:** "PATH" is the endpoint (e.g users/milanm), and "METHOD" is the HTTP method (e.g POST).

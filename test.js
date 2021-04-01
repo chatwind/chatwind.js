@@ -8,5 +8,7 @@ const chatwind = require(__dirname+"/index.js");
 
 /* stats */ await chatwind.stats().then(result => console.log(result));
 
+/* any API */ await chatwind.api("users/milanm", "GET").then(result => console.log(result));
+
 
 })();
